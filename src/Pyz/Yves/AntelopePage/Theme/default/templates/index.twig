@@ -1,0 +1,28 @@
+{% extends template('page-layout-main') %}
+
+{% define data = {
+    antelopes: _view.antelopes,
+} %}
+
+{% block title %}
+    <h1 class="page-info__title title">All antelopes gather here</h1>
+{% endblock %}
+
+{% block content %}
+    <div>
+        {% if data.antelopes is not null %}
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Color</th>
+                </tr>
+                {% for antelope in data.antelopes %}
+                    <tr>
+                        <td>{{ antelope.name }}</td>
+                        <td>{{ antelope.color }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% endif %}
+    </div>
+{% endblock %}
