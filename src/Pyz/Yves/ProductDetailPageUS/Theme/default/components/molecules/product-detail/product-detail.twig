@@ -6,7 +6,7 @@
 } %}
 
 {% define data = {
-    product: _view.product,
+    productUrl: '',
     description: '',
     attributes: []
 } %}
@@ -23,11 +23,8 @@
         </div>
         <br>
         <h2 class="{{ config.name }}__title title title--h4">{{ 'page.product.social' | trans }}</h2>
-        {% include molecule('social-media', 'ShopUi') with {
-            data: {
-                product: data.product
-            }
-        } only %}
+        {% widget 'SocialMediaWidget' args [data.productUrl] only %}
+        {% endwidget %}
     </div>
 
     <div class="col col--sm-12 col--lg-5">

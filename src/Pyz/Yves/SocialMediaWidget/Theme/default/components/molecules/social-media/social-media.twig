@@ -6,7 +6,7 @@
 } %}
 
 {% define data = {
-    product: required,
+    productUrl: '',
     shopUrl: app.request.getSchemeAndHttpHost()
 } %}
 
@@ -14,13 +14,13 @@
     <div class="{{ config.name }}__container grid grid--gap-smaller">
         <div class="fb-share-button" data-href="http://yves.us.spryker.local/en/" data-layout="" data-size="">
             <a target="_blank"
-               href="https://www.facebook.com/sharer/sharer.php?u={{ data.shopUrl ~ data.product.url | url_encode }}&amp;src=sdkpreparse"
+               href="https://www.facebook.com/sharer/sharer.php?u={{ data.shopUrl ~ data.productUrl | url_encode }}&amp;src=sdkpreparse"
                class="{{ config.name }}__icon">
                 <img class="{{ config.name }}__icon" src="{{ publicPath('images/logo-facebook.png') }}" alt="facebook logo">
             </a>
         </div>
 
-        <a target="_blank" href="https://www.linkedin.com/shareArticle?originalUrl={{ data.shopUrl ~ data.product.url | url_encode }}&shareMediaCategory=ARTICLE">
+        <a target="_blank" href="https://www.linkedin.com/shareArticle?originalUrl={{ data.shopUrl ~ data.productUrl | url_encode }}&shareMediaCategory=ARTICLE">
             <img class="{{ config.name }}__icon" src="{{ publicPath('images/logo-linkedin.png') }}" alt="linked-in logo">
         </a>
     </div>

@@ -74,6 +74,7 @@
         <div class="js-pdp-section">
             {% include molecule('product-detail', 'ProductDetailPage') with {
                 data: {
+                    productUrl: data.productUrl,
                     description: data.product.description,
                     attributes: data.product.attributes
                 }

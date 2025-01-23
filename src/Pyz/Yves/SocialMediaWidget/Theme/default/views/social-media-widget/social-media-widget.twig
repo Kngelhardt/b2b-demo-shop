@@ -1,0 +1,13 @@
+{% extends template('widget') %}
+
+{% define data = {
+    productUrl: _widget.productUrl,}
+%}
+
+{% block body %}
+    {% include molecule('social-media', 'SocialMediaWidget') with {
+        data: {
+            productUrl: data.productUrl
+        }
+    } only %}
+{% endblock %}
