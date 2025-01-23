@@ -7,6 +7,12 @@
             "namespace": "",
             "themes": ["green"],
             "defaultTheme": "default"
+        },
+        {
+            "moduleSuffix": "US",
+            "namespace": "US",
+            "themes": ["green"],
+            "defaultTheme": "default"
         }
     ]
 }
